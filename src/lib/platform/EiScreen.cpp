@@ -428,7 +428,10 @@ bool EiScreen::isPrimary() const
 
 void EiScreen::update_shape()
 {
-
+  w_ = 0;
+  h_ = 0;
+  x_ = 0xFFFFFFFF;
+  y_ = 0xFFFFFFFF;
   for (auto it = ei_devices_.begin(); it != ei_devices_.end(); it++) {
     auto idx = 0;
     struct ei_region *r;
